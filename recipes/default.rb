@@ -23,11 +23,9 @@ log "notified by directory[/tmp/dir_bar]" do
 end
 
 alex_example_inline "foo" do
-  action :create
-  notifies :write, "log[notified by alex_example_inline[foo]]"
+  notifies :write, "log[notified by alex_example_inline[foo]]", :immediately
 end
 
 alex_example_outline "bar" do
-  action :create
-  notifies :write, "log[notified by alex_example_outline[bar]]"
+  notifies :write, "log[notified by alex_example_outline[bar]]", :immediately
 end
