@@ -21,3 +21,13 @@ log "notified by directory[/tmp/dir_bar]" do
   level :warn
   action :nothing
 end
+
+alex_example_inline "foo" do
+  action :create
+  notifies :write, "log[notified by alex_example_inline[foo]]"
+end
+
+alex_example_outline "bar" do
+  action :create
+  notifies :write, "log[notified by alex_example_outline[bar]]"
+end
