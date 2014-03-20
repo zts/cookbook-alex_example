@@ -1,0 +1,26 @@
+Relevant output from 'kitchen converge default-centos"
+
+[2014-03-20T10:30:08-04:00] INFO: *** Chef 11.10.4 ***
+[2014-03-20T10:30:08-04:00] INFO: Chef-client pid: 49
+[2014-03-20T10:30:08-04:00] INFO: Setting the run_list to ["recipe[alex_example::default]"] from JSON
+[2014-03-20T10:30:08-04:00] INFO: Run List is [recipe[alex_example::default]]
+[2014-03-20T10:30:08-04:00] INFO: Run List expands to [alex_example::default]
+[2014-03-20T10:30:08-04:00] INFO: Starting Chef Run for default-centos-64
+[2014-03-20T10:30:08-04:00] INFO: Running start handlers
+[2014-03-20T10:30:08-04:00] INFO: Start handlers complete.
+[2014-03-20T10:30:08-04:00] INFO: Processing log[notified by alex_example_inline[foo]] action nothing (alex_example::default line 10)
+[2014-03-20T10:30:08-04:00] INFO: Processing log[notified by alex_example_outline[bar]] action nothing (alex_example::default line 15)
+[2014-03-20T10:30:08-04:00] INFO: Processing log[notified by directory[/tmp/dir_bar]] action nothing (alex_example::default line 20)
+[2014-03-20T10:30:08-04:00] INFO: Processing alex_example_inline[foo] action create (alex_example::default line 25)
+[2014-03-20T10:30:08-04:00] INFO: Processing directory[/tmp/dir_foo] action create (/tmp/kitchen/cookbooks/alex_example/providers/inline.rb line 4)
+[2014-03-20T10:30:08-04:00] INFO: directory[/tmp/dir_foo] created directory /tmp/dir_foo
+[2014-03-20T10:30:08-04:00] INFO: Processing alex_example_outline[bar] action create (alex_example::default line 30)
+[2014-03-20T10:30:08-04:00] INFO: Processing directory[/tmp/dir_bar] action create (/tmp/kitchen/cookbooks/alex_example/providers/outline.rb line 2)
+[2014-03-20T10:30:08-04:00] INFO: directory[/tmp/dir_bar] created directory /tmp/dir_bar
+[2014-03-20T10:30:08-04:00] INFO: alex_example_inline[foo] sending write action to log[notified by alex_example_inline[foo]] (delayed)
+[2014-03-20T10:30:08-04:00] INFO: Processing log[notified by alex_example_inline[foo]] action write (alex_example::default line 10)
+[2014-03-20T10:30:08-04:00] WARN: notified by alex_example_inline[foo]
+[2014-03-20T10:30:08-04:00] INFO: directory[/tmp/dir_bar] sending write action to log[notified by directory[/tmp/dir_bar]] (delayed)
+[2014-03-20T10:30:08-04:00] INFO: Processing log[notified by directory[/tmp/dir_bar]] action write (alex_example::default line 20)
+[2014-03-20T10:30:08-04:00] WARN: notified by directory[/tmp/dir_bar]
+[2014-03-20T10:30:08-04:00] INFO: Chef Run complete in 0.061959768 seconds
