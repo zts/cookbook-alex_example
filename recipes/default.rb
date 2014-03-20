@@ -6,3 +6,18 @@
 # 
 # All rights reserved - Do Not Redistribute
 #
+
+log "notified by alex_example_inline[foo]" do
+  level :warn
+  action :nothing
+end
+
+log "notified by alex_example_outline[bar]" do
+  level :warn
+  action :nothing
+end
+
+log "notified by directory[/tmp/dir_bar]" do
+  level :warn
+  action :nothing
+end
